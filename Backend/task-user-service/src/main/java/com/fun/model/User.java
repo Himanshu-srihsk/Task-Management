@@ -18,5 +18,6 @@ public class User {
     private String email;
     private String role;
     private String fullName;
+    //private String mobile;
 
 }
