@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/model/TaskStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/model/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/repository/TaskRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/service/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/service/TaskServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Himanshu-srihsk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Himanshu-srihsk/Task-Management.git&quot;,
+    &quot;accountId&quot;: &quot;5535b8a5-eae8-483f-9616-ec88165cb693&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2mLQoKhjpHaNoQyiAqHn4wY2reI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TaskServiceApplication.executor": "Run",
+    "Application.TaskUserServiceApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="" />
+      <created>1726853550256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726853550256</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Backend$TaskServiceApplication.ic" NAME="TaskServiceApplication Coverage Results" MODIFIED="1726853815434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.fun.*</FILTER>
+    </SUITE>
+  </component>
+</project>
