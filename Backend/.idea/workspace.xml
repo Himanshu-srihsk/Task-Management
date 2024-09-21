@@ -5,29 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task-submission-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/TaskSubmissionServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/controller/SubmissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/model/Submission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/model/TaskDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/model/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/model/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/repository/SubmissionRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/service/SubmissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/service/SubmissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/fun/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task-submission-service/src/test/java/com/fun/TaskSubmissionServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/fun/eureka/server/EurekaServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/fun/eureka/server/EurekaServerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-submission-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-submission-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +66,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.EurekaServerApplication.executor": "Run",
     "Application.TaskServiceApplication.executor": "Run",
     "Application.TaskSubmissionServiceApplication.executor": "Run",
     "Application.TaskUserServiceApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Himanshu/Desktop/work/Spring/Task-management-Project/Backend/task-submission-service"
+    "last_opened_file_path": "C:/Users/Himanshu/Desktop/work/Spring/Task-management-Project/Backend/eureka-server"
   }
 }]]></component>
   <component name="RecentsManager">
