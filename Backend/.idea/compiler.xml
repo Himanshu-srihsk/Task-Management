@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="task-user-service" />
         <module name="task-service" />
+        <module name="Api-gateway" />
         <module name="task-submission-service" />
         <module name="eureka-server" />
       </profile>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Api-gateway" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="task-service" options="-parameters" />
       <module name="task-submission-service" options="-parameters" />
