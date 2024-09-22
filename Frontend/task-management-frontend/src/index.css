@@ -15,7 +15,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.card{
+  background-color: #0c071b;
+  box-shadow: rgba(215,106,255,0.507) 0px 0px 20px;
+  padding: 1rem;
+  border-radius: 5px;
 
+}
+.customButton{
+  color: white !important;
+  background-image: linear-gradient(150deg, #c24dd0, #7a72fa); 
+}
+
+.techStack{
+  color: #c24dd0;
+  border: 2px solid #c24dd0;
+  padding: 0.5rem 2 rem;
+}
 
 @tailwind base;
 @tailwind components;
