@@ -23,10 +23,7 @@ const style = {
 
 const tags = ["Angular", "React", "Vuejs", "Spring Boot", "Node js", "Python", "Flask", "Django"];
 
-// React.useEffect(()=>{
-
-// },[])
-export default function EditTaskForm({handleClose, open}) {
+export default function CreateTask({handleClose, open}) {
   const [formData, setFormData] = React.useState({
     title:"",
     image:"",
@@ -146,7 +143,7 @@ export default function EditTaskForm({handleClose, open}) {
              </Grid>
              <Grid item xs={12}>
               <Button  fullWidth className='customButton' type='submit' sx={{padding:"0.9rem"}}>
-                Update Task
+                Create Task
               </Button>
              </Grid>
 

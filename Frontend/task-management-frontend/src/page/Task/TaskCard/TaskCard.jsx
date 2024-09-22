@@ -27,16 +27,18 @@ const TaskCard = () => {
         setOpenSubmissionList(false);
     }
 
-    const [openUpdateTaskForm, setOpenUpdateTaskForm] = useState(false);
-    const handleCloseUpdateTaskForm = () => {
-        setOpenUpdateTaskForm(false);
-    }
+    
 
     const handleOpenUserList = () => {
         setOpenUserList(true);
     }
     const handleOpenSubmissionList = () => {
         setOpenSubmissionList(true);
+    }
+
+    const [openUpdateTaskForm, setOpenUpdateTaskForm] = useState(false);
+    const handleCloseUpdateTaskForm = () => {
+        setOpenUpdateTaskForm(false);
     }
     const handleOpenUpdateTaskModal = () => {
         setOpenUpdateTaskForm(true);

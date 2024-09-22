@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/EditTaskForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/EditTaskForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +55,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.EurekaServerApplication.executor": "Run",
-    "Application.TaskServiceApplication.executor": "Run",
-    "Application.TaskSubmissionServiceApplication.executor": "Run",
-    "Application.TaskUserServiceApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Himanshu/Desktop/work/Spring/Task-management-Project/Backend/Api-gateway"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskSubmissionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TaskUserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Himanshu/Desktop/work/Spring/Task-management-Project/Backend/Api-gateway&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fun.model" />
