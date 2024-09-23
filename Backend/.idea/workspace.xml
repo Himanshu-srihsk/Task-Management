@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/EditTaskForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/EditTaskForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
