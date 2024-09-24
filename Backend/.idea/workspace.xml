@@ -7,11 +7,18 @@
     <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/fun/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/AuthSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/AuthSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/TaskSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/TaskSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Auth/Signin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Auth/Signin.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/CreateTask.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/TaskList/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/TaskList/TaskList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/navbar/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

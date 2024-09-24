@@ -42,6 +42,7 @@ public class AppConfig {
                 cfg.setAllowedOrigins(Collections.singletonList(
                         "http://localhost:3000"
                 ));
+               // cfg.setAllowedOrigins(Collections.singletonList("*"));
                 cfg.setAllowedMethods(Collections.singletonList("*"));
                 cfg.setAllowCredentials(true);
                 cfg.setAllowedHeaders(Collections.singletonList("*"));

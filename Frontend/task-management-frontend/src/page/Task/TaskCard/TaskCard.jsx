@@ -4,8 +4,18 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import UserList from "../../UserList";
 import SubmissionList from "./SubmissionList";
 import EditTaskForm from "./EditTaskForm";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteTask } from "../../../Store/TaskSlice";
+import { useLocation, useNavigate } from "react-router-dom";
+import SubmitFormModal from "../SubmitFormModal";
 
-const TaskCard = () => {
+const TaskCard = ({item}) => {
+    const dispatch = useDispatch();
+    const  location = useLocation();
+    const navigate = useNavigate();
+    const {auth} = useSelector(store => store);
+
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const openMenu = Boolean(anchorEl);
     const handleMenuClick = (event) => {
@@ -22,31 +32,81 @@ const TaskCard = () => {
         setOpenUserList(false);
     }
 
+   
+    
+
+    const handleOpenUserList = () => {
+
+        const updatedParams = new URLSearchParams(location.search)
+        
+        updatedParams.set("taskId", item.id)
+            const queryString = updatedParams.toString();
+            const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
+            navigate(updatePath);
+
+        setOpenUserList(true);
+        handleMenuClose()
+    }
     const [openSubmissionList, setOpenSubmissionList] = useState(false);
     const handleCloseSubmissionList = () => {
         setOpenSubmissionList(false);
     }
 
-    
-
-    const handleOpenUserList = () => {
-        setOpenUserList(true);
-    }
     const handleOpenSubmissionList = () => {
+        const updatedParams = new URLSearchParams(location.search)
+        
+        updatedParams.set("taskId", item.id)
+            const queryString = updatedParams.toString();
+            const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
+            navigate(updatePath);
+
         setOpenSubmissionList(true);
+        handleMenuClose();
     }
 
     const [openUpdateTaskForm, setOpenUpdateTaskForm] = useState(false);
     const handleCloseUpdateTaskForm = () => {
         setOpenUpdateTaskForm(false);
     }
+    const handleRemoveTaskIdParams = () =>{
+        const updatedParams = new URLSearchParams(location.search)
+        updatedParams.delete("filter")
+           const queryString = updatedParams.toString();
+           const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
+           navigate(updatePath);
+    }
     const handleOpenUpdateTaskModal = () => {
-        setOpenUpdateTaskForm(true);
+        const updatedParams = new URLSearchParams(location.search)
+        
+        updatedParams.set("taskId", item.id)
+            const queryString = updatedParams.toString();
+            const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
+            navigate(updatePath);
+            setOpenUpdateTaskForm(true);
         handleMenuClose();
     }
 
     const handleDeleteTask = () => {
+        dispatch(deleteTask(item.id))
        handleMenuClose();
+    }
+
+
+    const [openSubmitFormModal, setOpenSubmitFormModal] = useState(false);
+    const handleCloseSubmitFormModal = () => {
+        setOpenSubmitFormModal(false);
+    }
+
+    const handleOpenSubmitFormModal = () => {
+        const updatedParams = new URLSearchParams(location.search)
+        
+        updatedParams.set("taskId", item.id)
+            const queryString = updatedParams.toString();
+            const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
+            navigate(updatePath);
+
+            setOpenSubmitFormModal(true);
+        handleMenuClose();
     }
 
     return (
@@ -72,14 +132,19 @@ const TaskCard = () => {
                         'aria-labelledby': 'basic-button',
                     }}
                 >
-                    {role === "ROLE_ADMIN" && (
+                    {auth.user?.role === "ROLE_ADMIN" ? (
                         <>
                             <MenuItem onClick={handleOpenUserList}>Assigned User</MenuItem>
                             <MenuItem onClick={handleOpenSubmissionList}>See Submissions</MenuItem>
                             <MenuItem onClick={handleOpenUpdateTaskModal}>Edit</MenuItem>
                             <MenuItem onClick={handleDeleteTask}>Delete</MenuItem>
                         </>
-                    )}
+                    ): (
+                        <>
+                        <MenuItem onClick={handleOpenSubmitFormModal}>Submit</MenuItem>
+                        </>
+                    )
+                    }
                 </Menu>
             </div>
 
@@ -87,23 +152,23 @@ const TaskCard = () => {
                 <div className="">
                     <img 
                         className="lg:w-[7rem] lg:h-[7rem] object-cover"
-                        src="https://cdn.pixabay.com/photo/2023/10/24/05/08/dog-8337394_640.jpg" 
-                        alt="Animal Care"
+                        src={item.image} 
+                        alt=""
                     />
                 </div>
 
                 <div className="space-y-5">
                     <div className="space-y-2">
-                        <h1 className="font-bold text-lg">Animal Care</h1>
+                        <h1 className="font-bold text-lg">{item.title}</h1>
                         <p className="text-gray-500 text-sm">
-                            This task involves cleaning, feeding, and grooming pets. You will need to keep them hydrated, comfortable, and healthy.
+                           {item.description}
                         </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2 items-center">
-                        {[1,1,1].map((item, index) => (
+                        {item.tags.map((item, index) => (
                             <span key={index} className="py-1 px-5 rounded-full techStack">
-                                React
+                                {item}
                             </span>
                         ))}
                     </div>
@@ -112,7 +177,8 @@ const TaskCard = () => {
 
             <UserList open={openUserList} handleClose={handleCloseUserList} />
             <SubmissionList open={openSubmissionList} handleClose={handleCloseSubmissionList} />
-            <EditTaskForm open={openUpdateTaskForm} handleClose={handleCloseUpdateTaskForm} />
+            <EditTaskForm item= {item} open={openUpdateTaskForm} handleClose={handleCloseUpdateTaskForm} />
+            <SubmitFormModal open={openSubmitFormModal} handleClose={SubmitFormModal}/>
         </div>
     );
 };

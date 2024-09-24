@@ -8,6 +8,8 @@ import * as React from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { useDispatch } from 'react-redux';
+import { createTask } from '../../Store/TaskSlice';
 
 const style = {
   position: 'absolute',
@@ -24,6 +26,7 @@ const style = {
 const tags = ["Angular", "React", "Vuejs", "Spring Boot", "Node js", "Python", "Flask", "Django"];
 
 export default function CreateTask({handleClose, open}) {
+  const dispatch = useDispatch();
   const [formData, setFormData] = React.useState({
     title:"",
     image:"",
@@ -69,6 +72,7 @@ export default function CreateTask({handleClose, open}) {
     const {deadline} = formData;
     formData.deadline = formatDate(deadline)
     formData.tags = selectedTags
+    dispatch(createTask(formData));
     console.log("formData",formData, "deadline: ",formData.deadline );
     handleClose();
   }

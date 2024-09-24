@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import "./Sidebar.css"
 import CreateTask from '../Task/CreateTask';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { logout } from '../../Store/AuthSlice';
+import { useDispatch } from 'react-redux';
 const menu = [
     {name: "Home", value:"HOME", role:["ROLE_ADMIN", "ROLE_CUSTOMER"]},
     {name: "Done", value:"DONE", role:["ROLE_ADMIN", "ROLE_CUSTOMER"]},
@@ -13,6 +15,7 @@ const menu = [
 ]
 const role = "ROLE_ADMIN";
 const Sidebar = () => {
+    const dispatch = useDispatch();
     const location = useLocation();
     const navigate = useNavigate();
     const [activeMenu, setActiveMenu] = useState("Home");
@@ -38,29 +41,12 @@ const Sidebar = () => {
             const queryString = updatedParams.toString();
             const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
             navigate(updatePath);
-
-            // // Add logic to update task status here
-            // console.log("Update Task Status", item.value)
-
-            // // Add logic to fetch updated task list here
-            // console.log("Fetch updated task list")
-
-            // // Add logic to set new active menu here
-            // console.log("Set new active menu", item.name)
-
-            // // Add logic to update task status in task list here
-            // console.log("Update task status in task list", item.value)
-
-            // // Add logic to fetch updated task list in task list here
-            // console.log("Fetch updated task list in task list")
-
-            // // Add logic to set new active menu in task list here
-            // console.log("Set new active menu in task list", item.
         }
         setActiveMenu(item.name);
     }
     const handleLogout = () => {
         // Add logout logic here
+        dispatch(logout())
         console.log("handleLogout")
     }
   return (

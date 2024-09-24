@@ -3,10 +3,15 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Button, IconButton } from "@mui/material";
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import { useDispatch } from "react-redux";
+import { acceptDeclineSubmission } from "../../../Store/SubmissionSlice";
 
-const SubmissionCard = () => {
+const SubmissionCard = ({item}) => {
+  const dispatch = useDispatch();
+
     const handleAcceptDecline = (status) =>{
         // API Call to accept or decline submission
+        dispatch(acceptDeclineSubmission({id: item.id, status: status}))
         console.log(status);
     }
   return (
@@ -17,7 +22,7 @@ const SubmissionCard = () => {
           <div className="flex items-center gap-2 text-[#c24dd0]">
             <OpenInNewIcon />
             <a
-              href="https://github.com/Himanshu-Kumar-Kishore/Task-management-Project"
+              href= {item.githubLink}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -27,12 +32,12 @@ const SubmissionCard = () => {
         </div>
         <div className="flex items-center gap-2 text-xs">
           <p>Submission Time:</p>
-          <p className="text-gray-400"> 2024-09-22T11:30:45.123</p>
+          <p className="text-gray-400"> {item.submissionTime}</p>
         </div>
       </div>
 
       <div>
-        {true ? (
+        {item.status==="PENDING" ? (
           <div className="flex gap-5">
             <div className="text-green-500">
                 <IconButton color="success" onClick={()=> handleAcceptDecline("ACCEPTED")}>
@@ -49,9 +54,9 @@ const SubmissionCard = () => {
           <Button
             variant="outlined"
             size="small"
-            color={true ? "success" : "error"}
+            color={item.status==="ACCEPTED" ? "success" : "error"}
           >
-            Accept
+            {item.status}
           </Button>
         )}
       </div>

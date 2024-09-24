@@ -6,15 +6,34 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from './page/navbar/Navbar';
 import Home from './page/home/Home';
 import Auth from './page/Auth/Auth';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTasks } from './Store/TaskSlice';
+import { getUserProfile } from './Store/AuthSlice';
 
 function App() {
-  const user = true;
+
+  const dispatch = useDispatch();
+
+  const {task, auth} = useSelector(store => store)
+
+  useEffect(()=> {
+    const jwt = localStorage.getItem('jwt'); 
+    if (jwt) {
+      console.log("ed ejne")
+      dispatch(fetchTasks({}))
+   dispatch(getUserProfile(auth.jwt || localStorage.getItem('jwt')))
+    }
+   
+  },[auth.jwt])
+   
+  console.log("auth:", auth)
+  // const user = true;
   return (
     <ThemeProvider theme={darkTheme}>
        <CssBaseline />
 
-       {user?<div>
+       {auth.user?<div>
            <Navbar/>
        <Home/>
        </div>: <Auth/>}

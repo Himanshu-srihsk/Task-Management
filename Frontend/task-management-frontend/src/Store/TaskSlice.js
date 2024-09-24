@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { api, setAuthHeader } from "../api/api";
+
 
 export const fetchTasks = createAsyncThunk("task/fetchTasks", 
     async({status})=> {
@@ -10,7 +12,7 @@ export const fetchTasks = createAsyncThunk("task/fetchTasks",
             console.log("task fetched successfully", data);
             return data;
         } catch (error) {
-            confirm("Error fetching tasks", error);
+            console.log("Error fetching tasks", error);
             throw Error(error.response.data.error);
         }
     }
@@ -26,21 +28,21 @@ export const fetchUsersTasks = createAsyncThunk("task/fetchUsersTasks",
             console.log("users task fetched successfully", data);
             return data;
         } catch (error) {
-            confirm("Error fetching users tasks", error);
+            console.log("Error fetching users tasks", error);
             throw Error(error.response.data.error);
         }
     }
 )
 
 export const fetchTasksById = createAsyncThunk("task/fetchTasksById", 
-    async({taskId})=> {
+    async(taskId)=> {
         setAuthHeader(localStorage.getItem("jwt"), api)
         try {
             const {data}= await api.get(`/api/tasks/${taskId}`);
             console.log("fetchTasksById", data);
             return data;
         } catch (error) {
-            confirm("Error fetchTasksById", error);
+            console.log("Error fetchTasksById", error);
             throw Error(error.response.data.error);
         }
     }
@@ -48,14 +50,16 @@ export const fetchTasksById = createAsyncThunk("task/fetchTasksById",
 
 
 export const createTask = createAsyncThunk("task/createTask", 
-    async({taskData})=> {
+    async(taskData)=> {
         setAuthHeader(localStorage.getItem("jwt"), api)
+        console.log("Payload being sent to the server: ", taskData);
+
         try {
             const {data}= await api.post(`/api/tasks`,taskData);
             console.log("created Task", data);
             return data;
         } catch (error) {
-            confirm("Error in create  Task", error);
+            console.log("Error in create  Task", error);
             throw Error(error.response.data.error);
         }
     }
@@ -69,7 +73,7 @@ export const updateTask = createAsyncThunk("task/updateTask",
             console.log("updatedTaskData Task", data);
             return data;
         } catch (error) {
-            confirm("Error in update  Task", error);
+            console.log("Error in update  Task", error);
             throw Error(error.response.data.error);
         }
     }
@@ -83,21 +87,21 @@ export const assignedTaskToUser = createAsyncThunk("task/assignedTaskToUser",
             console.log("assignedTaskToUser Task", data);
             return data;
         } catch (error) {
-            confirm("Error in assignedTask", error);
+            console.log("Error in assignedTask", error);
             throw Error(error.response.data.error);
         }
     }
 )
 
 export const deleteTask = createAsyncThunk("task/deleteTask", 
-    async({taskId})=> {
+    async(taskId)=> {
         setAuthHeader(localStorage.getItem("jwt"), api)
         try {
             const {data}= await api.delete(`/api/tasks/${taskId}`);
             console.log("deleted Task Success");
             return data;
         } catch (error) {
-            confirm("Error in delete task", error);
+            console.log("Error in delete task", error);
             throw Error(error.response.data.error);
         }
     }
@@ -124,7 +128,7 @@ const taskSlice = createSlice({
             state.tasks = action.payload;
         })
 
-        .addCase(fetchTasks.rejected, (state)=>{
+        .addCase(fetchTasks.rejected, (state, action)=>{
             state.error = action.error.message;
             state.loading = false;
         })
@@ -138,8 +142,12 @@ const taskSlice = createSlice({
             state.loading = false;
             state.usersTask = action.payload;
         })
+        .addCase(fetchTasksById.fulfilled, (state, action)=>{
+            state.loading = false;
+            state.taskDetails = action.payload;
+        })
 
-        .addCase(fetchUsersTasks.rejected, (state)=>{
+        .addCase(fetchUsersTasks.rejected, (state, action)=>{
             state.error = action.error.message;
             state.loading = false;
         })
@@ -153,7 +161,7 @@ const taskSlice = createSlice({
             state.tasks.push(action.payload);
         })
 
-        .addCase(createTask.rejected, (state)=>{
+        .addCase(createTask.rejected, (state,action)=>{
             state.error = action.error.message;
             state.loading = false;
         })
