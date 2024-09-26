@@ -47,11 +47,18 @@ export default function SubmitFormModal({item, handleClose, open}) {
 
 
   
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const {deadline} = formData;
+  
+  //   dispatch(updateTask({id: taskId, updatedTaskData: formData}))
+  //   handleClose();
+  // }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const {deadline} = formData;
-  
-    dispatch(updateTask({id: taskId, updatedTaskData: formData}))
+    // console.log("formData is:"+ formData);
+    dispatch(submitTask({taskId: taskId, githubLink: formData.githubLink}))
     handleClose();
   }
 

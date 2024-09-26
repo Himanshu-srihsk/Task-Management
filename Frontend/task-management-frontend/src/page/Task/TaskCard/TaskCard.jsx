@@ -59,7 +59,7 @@ const TaskCard = ({item}) => {
             const queryString = updatedParams.toString();
             const updatePath = queryString?`${location.pathname}?${queryString}`: location.pathname;
             navigate(updatePath);
-
+        console.log("opening submissiion list..... and my taskId is " + item.id);
         setOpenSubmissionList(true);
         handleMenuClose();
     }
@@ -178,7 +178,7 @@ const TaskCard = ({item}) => {
             <UserList open={openUserList} handleClose={handleCloseUserList} />
             <SubmissionList open={openSubmissionList} handleClose={handleCloseSubmissionList} />
             <EditTaskForm item= {item} open={openUpdateTaskForm} handleClose={handleCloseUpdateTaskForm} />
-            <SubmitFormModal open={openSubmitFormModal} handleClose={SubmitFormModal}/>
+            <SubmitFormModal item={item} open={openSubmitFormModal} handleClose={handleCloseSubmitFormModal}/>
         </div>
     );
 };

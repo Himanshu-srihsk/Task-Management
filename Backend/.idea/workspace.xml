@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46f0a157-90f1-4b47-aa6e-b54186998f18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/fun/service/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-service/src/main/java/com/fun/service/TaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/SubmissionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/Store/SubmissionSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/SubmitFormModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/SubmitFormModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/SubmissionList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/task-management-frontend/src/page/Task/TaskCard/TaskCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

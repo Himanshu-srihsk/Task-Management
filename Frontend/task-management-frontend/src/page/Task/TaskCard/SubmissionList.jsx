@@ -20,12 +20,13 @@ const style = {
   p: 4,
 };
 
-const submissions = [1,1,1];
+// const submissions = [1,1,1];
 export default function SubmissionList({handleClose, open}) {
   const dispatch = useDispatch();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const taskId = queryParams.get('taskId');
+  console.log('TaskId  in Submission list' + taskId);
   const {submission} =useSelector(store => store);
 
   React.useEffect(()=>{
@@ -34,7 +35,7 @@ export default function SubmissionList({handleClose, open}) {
       dispatch(fetchSubmissionsByTaskId(taskId))
     }
   },[taskId])
-  // console.log("submissions:", submission)
+ console.log("submissions:", submission)
 
   return (
     <div>
