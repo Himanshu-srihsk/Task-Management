@@ -57,6 +57,9 @@ public class TaskServiceImpl implements TaskService{
         if(updatedTtask.getDeadline()!=null){
             task.setDeadline(updatedTtask.getDeadline());
         }
+        if(updatedTtask.getTags()!=null){
+            task.setTags(updatedTtask.getTags());
+        }
         return taskRepo.save(task);
     }
 
