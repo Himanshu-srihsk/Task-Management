@@ -1,6 +1,7 @@
 package com.fun.config;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.HttpMethod;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -20,17 +21,37 @@ import java.util.Collections;
 @Configuration
 @EnableWebSecurity
 public class AppConfig {
+//    @Bean
+//    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+//        http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                .authorizeHttpRequests(Authorize -> Authorize.requestMatchers
+//                        ("/api/**").authenticated().anyRequest().permitAll())
+//                .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class).csrf(csrf -> csrf.disable())
+//                .cors(cors -> cors.configurationSource(CorsConfigurationSource()))
+//                .httpBasic(Customizer.withDefaults())
+//                .formLogin(Customizer.withDefaults());
+//
+//        return http.build();
+//    }
+
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
-        http.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(Authorize -> Authorize.requestMatchers("/api/**").authenticated().anyRequest().permitAll())
-                .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class).csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(CorsConfigurationSource()))
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/api/**").authenticated()
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // Allow preflight requests
+                        .anyRequest().permitAll()
+                )
+                .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class)
+                .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.configurationSource(CorsConfigurationSource())) // Ensure method name is correct
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults());
 
         return http.build();
     }
+
 
     private CorsConfigurationSource CorsConfigurationSource() {
 
@@ -43,7 +64,8 @@ public class AppConfig {
                         "http://localhost:3000"
                 ));
                // cfg.setAllowedOrigins(Collections.singletonList("*"));
-                cfg.setAllowedMethods(Collections.singletonList("*"));
+//                cfg.setAllowedMethods(Collections.singletonList("*"));
+                cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 cfg.setAllowCredentials(true);
                 cfg.setAllowedHeaders(Collections.singletonList("*"));
                 cfg.setExposedHeaders(Arrays.asList("Authorization"));
